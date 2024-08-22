@@ -1,3 +1,1 @@
-print(" new hello git with change")
-print("Hello")
-# esto es un comentario.
+print(" new hello github")
