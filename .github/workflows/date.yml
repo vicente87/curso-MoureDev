@@ -4,7 +4,7 @@ on:
     branches: [ master ]
 jobs:
     build:
-       runs-on: ubuntu-lastest
+       runs-on: ubuntu-latest
        permissions:
          contents: write
        
@@ -18,7 +18,7 @@ jobs:
                   python-version: '3.11'
 
               - name: Run archive
-                run: python date.py
+                run: python3 date.py
 
               - name: Upload generated file
                 uses: stefanzweifel/git-auto-commit-action@v5
