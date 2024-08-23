@@ -17,13 +17,17 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'
+        python-version: '3.11'
 
     - name: Run Python script
       run: python date.py
 
-    - name: Upload file
-      uses: actions/upload-artifact@v3
-      with:
-        name: fecha_hora_output
-        path: fecha_hora.txt
+    - name: Commit changes
+      run: |
+        git add fecha_hora.txt
+        git commit -m "Add generated fecha_hora.txt"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@v1
+     
+
